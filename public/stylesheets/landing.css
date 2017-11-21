@@ -41,22 +41,22 @@ body {
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: url(images/automobile2.jpg);
+  background-image: url(/images/train1.jpg);
 }
 .slideshow li:nth-child(2) { 
-  background-image: url(images/automobile3.jpg);
+  background-image: url(/images/train2.jpg);
   animation-delay: 10s; 
 }
 .slideshow li:nth-child(3) { 
-  background-image: url(images/automobile4.jpg);
+  background-image: url(/images/train3.jpg);
   animation-delay: 20s; 
 }
 .slideshow li:nth-child(4) { 
-  background-image: url(images/automobile5.jpg);
+  background-image: url(/images/train4.jpg);
   animation-delay: 30s; 
 }
 .slideshow li:nth-child(5) { 
-  background-image: url(images/automobile6.jpg);
+  background-image: url(/images/NationalRail.svg);
   animation-delay: 40s; 
 }
 

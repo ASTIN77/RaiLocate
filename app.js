@@ -21,13 +21,21 @@ app.use(function(req,res, next){
     res.locals.confirm = req.flash("confirm");
     next(); });
 
+// INDEX ROUTE
 app.get("/", function(req,res){
     res.render("landing");
 });
 
+// TRAIN ROUTES
+
 app.get("/trains", function(req,res){
     res.render("trains");
+    
 });
+
+app.post("/trainResults", function(req,res){
+    res.render("trainResults");
+})
 
 app.listen(process.env.PORT, process.env.IP, function() {
     console.log("Application Server Running");

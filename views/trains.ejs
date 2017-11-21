@@ -1,9 +1,18 @@
 <% include ./partials/header %>
 <section>
     <div class="trainHeadings">
-       <h1>RaiLocate - Fast, Reliable Train Infromation!</h1>
+       <h1>RaiLocate - Fast, Reliable Train Information!</h1>
       </div>
-    
+</section>
+
+<section>
+        <div class="form-group">
+            <form action="/trainResults" method="POST">
+                <input class="form-control" type = "text" placeholder="Departing Station:" name="departing"</input>
+                <input class="form-control" type = "text" placeholder="Destination Station:" name="destination"</input>
+                <input class="form-control" type="submit" value="Find Trains!"></input>
+            </form>
+        </div>
 </section>
 
 

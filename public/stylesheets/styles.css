@@ -7,10 +7,12 @@
     color: #ff0000    !important;
 }
 
-.trainHeadings {
+.trainHeadings, .trainSearch {
     display: flex;
     width: 60%;
     flex-direction: row;
     justify-content: space-around;
     margin: 20px auto;
 }
+
+
