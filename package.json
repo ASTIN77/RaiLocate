@@ -1,0 +1,31 @@
+{
+  "name": "railocate",
+  "version": "1.0.0",
+  "description": "Live UK data train location application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ASTIN77/RaiLocate.git"
+  },
+  "author": "Andrew Tinsley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ASTIN77/RaiLocate/issues"
+  },
+  "homepage": "https://github.com/ASTIN77/RaiLocate#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "method-override": "^2.3.10",
+    "mongoose": "^4.13.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.4.0"
+  }
+}

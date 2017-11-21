@@ -1,0 +1,16 @@
+.navbar {
+    height: 70px;
+    color: #ffffff;
+}
+
+.navbar-brand {
+    color: #ff0000    !important;
+}
+
+.trainHeadings {
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px auto;
+}
