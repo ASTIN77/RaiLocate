@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+
+<section>
+    <div class="container">
+        <div class="rfow">
+            <div class="col-md-3">
+                <p>Station From : <%= trainResults.filterLocationName %> </p>
+                <p>Station To   : <%= trainResults.locationName %>  </p>
+            </div>
+        <div class="col-md-9">
+            <p>First Train Due at: <%= trainResults.trainServices[0].sta %></p>
+        </div>
+        </div>
+    </div>
+</section>
+
+<% include ./partials/footer %>
+
+
+
+

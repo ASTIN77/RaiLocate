@@ -1,7 +1,11 @@
 var express                 = require("express"),
     app                     = express(),
     bodyParser              = require("body-parser"),
+    router                  = express.Router(),
+    axios                   = require("axios"),
+    Promise                 = require("promise"),
     methodOverride          = require("method-override"),
+    XMLHttpRequest          = require("xmlhttprequest").XMLHttpRequest,
     flash                   = require("connect-flash");
 
     
@@ -33,10 +37,32 @@ app.get("/trains", function(req,res){
     
 });
 
-app.post("/trainResults", function(req,res){
-    res.render("trainResults");
-})
+app.post("/trains", function(req,res){
+    var departing = req.body.departing;
+    var destination = req.body.destination;
+    var url = "http://huxleyapp.azurewebsites.net/all/" + destination + "/from/" + departing +"?accessToken=420b5ac9-3385-4b10-8419-5cfb557cfe2e";
+    console.log(url)
+
+    axios.get(url)
+    .then(function(response) {
+/*     console.log(response.data.trainServices[0].origin[0].locationName);*/
+        var trainResults = response.data;
+        res.render("trainResults", {trainResults: trainResults});
+    })
+    .catch(function(error) {
+        req.flash("error", "Search criteria returned zero results");
+        res.redirect("back");
+    });
+    
+});
+    
+
+
+    
 
 app.listen(process.env.PORT, process.env.IP, function() {
     console.log("Application Server Running");
 });
+
+
+
