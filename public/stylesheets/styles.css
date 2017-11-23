@@ -12,7 +12,7 @@ body  {
 }
 
 .fa-train {
-    color: blue;
+    color: #003366;
 }
 
 .trainHeadings, .trainSearch {
@@ -31,12 +31,31 @@ body  {
     text-align: center;
 }
 
-.NRE {
+.NRE, .circle {
     display: flex;
     width: 100%;
     margin: 20px auto;
     flex-direction: row;
     justify-content: space-around;
+}
+.circle {
+    height: 100px;
+    flex-direction: column;
+    background-color: #003355;
+    color: #ffffff;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.departureBoard {
+    display: flex;
+    background-color: #cfcfcf;
+    color: #000000;
+
+    flex-direction: column;
+    margin: 20px auto;
+    border-radius: 10px;
 }
 
 

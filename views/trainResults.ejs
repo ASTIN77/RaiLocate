@@ -2,15 +2,21 @@
 
 <section>
     <div class="container">
-        <div class="rfow">
-            <div class="col-md-3">
+        <div class="row">
+            <div class="col-md-3 circle">
                 <p>Station From : <%= trainResults.filterLocationName %> </p>
                 <p>Station To   : <%= trainResults.locationName %>  </p>
             </div>
-        <div class="col-md-9">
-            <p>Train Due at: <%= trainResults.trainServices[0].sta %> Expected: <%= trainResults.trainServices[0].eta %></p>
-            <p>Train Exp at: <%= trainResults.trainServices[1].sta %> Expected: <%= trainResults.trainServices[1].eta %></p>
-        </div>
+ 
+            <div class="col-md-9">
+                <div class="departureBoard">
+                    <p>Train Due at: <%= trainResults.trainServices[0].sta %> Expected: <%= trainResults.trainServices[0].eta %></p>
+                    <p>Train Exp at: <%= trainResults.trainServices[1].sta %> Expected: <%= trainResults.trainServices[1].eta %></p>
+                    <p>Train Exp at: <%= trainResults.trainServices[2].sta %> Expected: <%= trainResults.trainServices[2].eta %></p>
+                    <p>Train Exp at: <%= trainResults.trainServices[3].sta %> Expected: <%= trainResults.trainServices[3].eta %></p>
+                    <p>Train Exp at: <%= trainResults.trainServices[4].sta %> Expected: <%= trainResults.trainServices[4].eta %></p>
+                </div>
+            </div>        
         </div>
     </div>
 </section>
