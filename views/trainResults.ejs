@@ -8,7 +8,8 @@
                 <p>Station To   : <%= trainResults.locationName %>  </p>
             </div>
         <div class="col-md-9">
-            <p>First Train Due at: <%= trainResults.trainServices[0].sta %></p>
+            <p>Train Due at: <%= trainResults.trainServices[0].sta %> Expected: <%= trainResults.trainServices[0].eta %></p>
+            <p>Train Exp at: <%= trainResults.trainServices[1].sta %> Expected: <%= trainResults.trainServices[1].eta %></p>
         </div>
         </div>
     </div>
