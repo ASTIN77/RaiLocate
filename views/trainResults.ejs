@@ -11,14 +11,17 @@
             <div class="col-md-9">
                 <div class="departureBoard">
                     <table>
-                        <tr><th>Timetabled</th><th>Expected</th><th>Platform</th><th>Updates</th></tr>
+                        <tr><th>Departure</th><th>Expected</th><th>Platform</th><th>Updates</th></tr>
                         <% var noServices = trainResults.trainServices.length; %>
                             <% for(i = 1; i<noServices; i++) { %>
                                     <tr><td><%= trainResults.trainServices[i].sta %> </td>
                                         <td><%= trainResults.trainServices[i].eta %> </td>
                                         <td><%= trainResults.trainServices[i].platform %> </td>
-                                        <td><%= trainResults.trainServices[i].delayReason %> 
+                                        <% if(!trainResults.trainServices[i].cancelReason==null){ %>
                                             <%= trainResults.trainServices[i].cancelReason %></td></tr>
+                                        <% } else { %>
+                                                <td><%= trainResults.trainServices[i].delayReason %> 
+                                            <% } %>
                             <% }; %>
                     </table>
                 </div>

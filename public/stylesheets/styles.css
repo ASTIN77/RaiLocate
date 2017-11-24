@@ -54,8 +54,11 @@ body  {
     background-color: #cfcfcf;
     color: #000000;
     flex-direction: column;
-    margin: 20px auto;
     border-radius: 10px;
+}
+
+.departureBoard table {
+    margin-bottom: 20px;
 }
 
 .departureBoard th, tr, td {
@@ -63,6 +66,10 @@ body  {
     font-family: Helvetica, sans-serif;
 	text-align: center;
 	padding: 15px;
+}
+
+.departureBoard table th:nth-child(4), .departureboard table tr td:nth-child(4) {
+    text-align: left;
 }
 
 
