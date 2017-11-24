@@ -44,6 +44,7 @@ body  {
     background-color: #003355;
     color: #ffffff;
     border-radius: 50%;
+    font-weight: bold;
     justify-content: center;
     align-items: center;
 }
@@ -52,11 +53,18 @@ body  {
     display: flex;
     background-color: #cfcfcf;
     color: #000000;
-
     flex-direction: column;
     margin: 20px auto;
     border-radius: 10px;
 }
+
+.departureBoard th, tr, td {
+
+    font-family: Helvetica, sans-serif;
+	text-align: center;
+	padding: 15px;
+}
+
 
 
 

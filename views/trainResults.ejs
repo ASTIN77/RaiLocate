@@ -10,11 +10,17 @@
  
             <div class="col-md-9">
                 <div class="departureBoard">
-                    <p>Train Due at: <%= trainResults.trainServices[0].sta %> Expected: <%= trainResults.trainServices[0].eta %></p>
-                    <p>Train Exp at: <%= trainResults.trainServices[1].sta %> Expected: <%= trainResults.trainServices[1].eta %></p>
-                    <p>Train Exp at: <%= trainResults.trainServices[2].sta %> Expected: <%= trainResults.trainServices[2].eta %></p>
-                    <p>Train Exp at: <%= trainResults.trainServices[3].sta %> Expected: <%= trainResults.trainServices[3].eta %></p>
-                    <p>Train Exp at: <%= trainResults.trainServices[4].sta %> Expected: <%= trainResults.trainServices[4].eta %></p>
+                    <table>
+                        <tr><th>Timetabled</th><th>Expected</th><th>Platform</th><th>Updates</th></tr>
+                        <% var noServices = trainResults.trainServices.length; %>
+                            <% for(i = 1; i<noServices; i++) { %>
+                                    <tr><td><%= trainResults.trainServices[i].sta %> </td>
+                                        <td><%= trainResults.trainServices[i].eta %> </td>
+                                        <td><%= trainResults.trainServices[i].platform %> </td>
+                                        <td><%= trainResults.trainServices[i].delayReason %> 
+                                            <%= trainResults.trainServices[i].cancelReason %></td></tr>
+                            <% }; %>
+                    </table>
                 </div>
             </div>        
         </div>
