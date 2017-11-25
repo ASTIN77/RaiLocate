@@ -40,12 +40,11 @@ app.get("/trains", function(req,res){
 app.post("/trains", function(req,res){
     var departing = req.body.departing;
     var destination = req.body.destination;
-    var url = "http://huxleyapp.azurewebsites.net/all/" + destination + "/from/" + departing +"?accessToken=420b5ac9-3385-4b10-8419-5cfb557cfe2e";
+    var url = "http://huxleyapp.azurewebsites.net/departures/" + departing + "/to/" + destination +"/?accessToken=420b5ac9-3385-4b10-8419-5cfb557cfe2e&expand=true";
     console.log(url)
 
     axios.get(url)
     .then(function(response) {
-/*     console.log(response.data.trainServices[0].origin[0].locationName);*/
         var trainResults = response.data;
         res.render("trainResults", {trainResults: trainResults});
     })

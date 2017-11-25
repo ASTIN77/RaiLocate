@@ -3,16 +3,21 @@ body  {
 }
 
 .navbar {
-    height: 70px;
+    height: 50px;
     color: #ffffff;
 }
 
 .navbar-brand {
-    color: #ff0000    !important;
+    padding: 5px 15px 5px 15px;
+}
+
+a.navbar-brand em {
+    color: #ff0000;
 }
 
 .fa-train {
     color: #003366;
+    padding: 0;
 }
 
 .trainHeadings, .trainSearch {
@@ -33,10 +38,10 @@ body  {
 
 .NRE, .circle {
     display: flex;
-    width: 100%;
     margin: 20px auto;
     flex-direction: row;
     justify-content: space-around;
+    text-align: center;
 }
 .circle {
     height: 100px;
@@ -47,28 +52,58 @@ body  {
     font-weight: bold;
     justify-content: center;
     align-items: center;
+    padding: 0;
 }
+
 
 .departureBoard {
     display: flex;
     background-color: #cfcfcf;
     color: #000000;
-    flex-direction: column;
-    border-radius: 10px;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+
 }
 
-.departureBoard table {
+.departureBoard  {
+    width: 100%;  
     margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 7px 7px 7px #c3c3c3;
 }
+
 
 .departureBoard th, tr, td {
-
     font-family: Helvetica, sans-serif;
 	text-align: center;
-	padding: 15px;
+	height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.departureBoard table th:nth-child(4), .departureboard table tr td:nth-child(4) {
+
+.departureBoard tr:nth-of-type(even) {
+    background-color: #fff;
+}
+
+.departureBoard tr:first-of-type {
+    background-color: #003355;
+    border-top-left-radius: 20px;
+    height: 30px;
+    color: #ffffff;
+}
+.departureBoard tr th:nth-of-type(1){
+    
+    border-top-left-radius: 20px;
+}
+
+.departureBoard tr th:nth-of-type(4){
+    border-top-right-radius: 20px;
+}
+
+.departureBoard th:nth-child(4), .departureBoard  tr td:nth-child(4) {
+    width: 100%;
     text-align: left;
 }
 
