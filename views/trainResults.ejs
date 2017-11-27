@@ -37,7 +37,12 @@
             <div class="col-md-3">
                     <table class="delayBoard">
                         <tr><th>Delays</th></tr>
-                        <tr><td>Data Test</td></tr>
+                        <tr><% if(!trainResults.nrccMessages==null) { %>
+                            <td><%- trainResults.nrccMessages[0].value %></td>
+                        <% } else { %>
+                            <td> No current delays </td>
+                            <% } %>
+                            </tr>
                     </table>
             </div>
         </div>
