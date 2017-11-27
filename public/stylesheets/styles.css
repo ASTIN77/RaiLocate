@@ -43,6 +43,11 @@ a.navbar-brand em {
     justify-content: space-around;
     text-align: center;
 }
+
+.buffer {
+    padding: 0;
+    margin: 0;
+}
 .circle {
     height: 100px;
     flex-direction: column;
@@ -61,18 +66,19 @@ a.navbar-brand em {
     background-color: #cfcfcf;
     color: #000000;
     flex-direction: row;
+    width: 100%;  
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 7px 7px 7px #c3c3c3;
     padding: 0;
     margin: 0;
 
 }
 
-.departureBoard  {
-    width: 100%;  
-    margin-bottom: 20px;
-    border-radius: 20px;
-    box-shadow: 7px 7px 7px #c3c3c3;
+.departureBoard tbody {
+    width: 100%;
 }
-
 
 .departureBoard th, tr, td {
     font-family: Helvetica, sans-serif;
@@ -82,24 +88,14 @@ a.navbar-brand em {
     padding-right: 15px;
 }
 
-
-.departureBoard tr:nth-of-type(even) {
+table.departureBoard tr:nth-of-type(even) {
     background-color: #fff;
 }
 
-.departureBoard tr:first-of-type {
+.departureBoard tr:first-child {
     background-color: #003355;
-    border-top-left-radius: 20px;
     height: 30px;
     color: #ffffff;
-}
-.departureBoard tr th:nth-of-type(1){
-    
-    border-top-left-radius: 20px;
-}
-
-.departureBoard tr th:nth-of-type(4){
-    border-top-right-radius: 20px;
 }
 
 .departureBoard th:nth-child(4), .departureBoard  tr td:nth-child(4) {
@@ -107,8 +103,37 @@ a.navbar-brand em {
     text-align: left;
 }
 
+.delayBoard {
 
+    display: flex;
+    background-color: #cfcfcf;
+    color: #000000;
+    flex-direction: row;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 7px 7px 7px #c3c3c3;
+    padding: 0;
+    margin: 0;
+    width: 400px;
+    height: 100px;
+    transform: translateY(50px);
 
+    
+}
+
+.delayBoard tbody {
+    width: 100%;
+}
+
+.delayBoard th, tr, td {
+
+    font-family: Helvetica, sans-serif;
+	text-align: center;
+	height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 
 .form-control::-webkit-input-placeholder {color: #555; text-align: center;}
