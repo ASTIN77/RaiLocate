@@ -4,12 +4,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
-                <div class="col-md-3"></div>
-                <div class="col-md-3"></div>
-                <div class="col-md-6 circle">
-                    <p>Depart : <%= trainResults.locationName %> </p>
-                    <p>Arrive : <%= trainResults.filterLocationName %>  </p>
-                </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 detailsBoard">
+                        <p>Depart : <%= trainResults.locationName %> </p>
+                        <p>Arrive : <%= trainResults.filterLocationName %>  </p>
+                    </div>
+                    <div class="col-md-2"></div>
             </div>
             
             <div class="col-md-6">
@@ -20,7 +20,11 @@
                                     <% for(i = 0; i<noServices; i++) { %>
                                             <tr><td><%= trainResults.trainServices[i].std %> </td>
                                                 <td><%= trainResults.trainServices[i].etd %> </td>
-                                                <td><%= trainResults.trainServices[i].platform %> </td>
+                                                <% if(trainResults.trainServices[i].platform){ %>
+                                                    <td><%= trainResults.trainServices[i].platform %> </td>
+                                                <% } else { %>
+                                                        <td>TBC</td>
+                                                    <% } %>
                                                     <% if(trainResults.trainServices[i].isCancelled){ %>
                                                          <td><%= trainResults.trainServices[i].cancelReason %></td>
                                                     <% } else { %>
@@ -49,7 +53,7 @@
                         <tr><% if(trainResults.nrccMessages) { %>
                             <td><%- trainResults.nrccMessages[0].value %></td>
                         <% } else { %>
-                            <td> No current delays </td>
+                            <td> No current delays via this route.</td>
                             <% } %>
                             </tr>
                     </table>

@@ -61,12 +61,13 @@ a.navbar-brand em {
     padding: 0;
     margin: 0;
 }
-.circle {
+.detailsBoard {
+    display:flex;
     height: 100px;
     flex-direction: column;
     background-color: #003355;
     color: #ffffff;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
     font-weight: bold;
     justify-content: center;
     align-items: center;
@@ -145,11 +146,14 @@ a.navbar-brand em {
 }
 
 .delayBoard tr:first-child {
-    background-color: orange;
+    background-color: #fd9328;
     height: 30px;
     width: 400px;
     color: #ffffff;
-    padding: 5px;
+}
+
+.delayBoard td:first-child{
+        padding: 5px 15px;
 }
 
 
