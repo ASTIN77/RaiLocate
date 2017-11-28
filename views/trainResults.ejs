@@ -15,29 +15,38 @@
             <div class="col-md-6">
                 <table class="departureBoard">
                         <tr><th>Departure</th><th>Expected</th><th>Platform</th><th>Updates</th></tr>
-                        <% var noServices = trainResults.trainServices.length; %>
-                            <% for(i = 0; i<noServices; i++) { %>
-                                    <tr><td><%= trainResults.trainServices[i].std %> </td>
-                                        <td><%= trainResults.trainServices[i].etd %> </td>
-                                        <td><%= trainResults.trainServices[i].platform %> </td>
-                                            <% if(trainResults.trainServices[i].isCancelled){ %>
-                                                 <td><%= trainResults.trainServices[i].cancelReason %></td>
-                                            <% } else { %>
-                                                    <% if(trainResults.trainServices[i].delayReason){ %>
-                                                        <td><%= trainResults.trainServices[i].delayReason %></td>
-                                                        <% } else { %>
-                                                            <td></td>
-                                                    <% } %>    
-                                                <% } %>
-                                                    </tr>    
-                                            <% } %>
+                        <% if(trainResults.trainServices){ %>
+                                <% var noServices = trainResults.trainServices.length; %>
+                                    <% for(i = 0; i<noServices; i++) { %>
+                                            <tr><td><%= trainResults.trainServices[i].std %> </td>
+                                                <td><%= trainResults.trainServices[i].etd %> </td>
+                                                <td><%= trainResults.trainServices[i].platform %> </td>
+                                                    <% if(trainResults.trainServices[i].isCancelled){ %>
+                                                         <td><%= trainResults.trainServices[i].cancelReason %></td>
+                                                    <% } else { %>
+                                                            <% if(trainResults.trainServices[i].delayReason){ %>
+                                                                <td><%= trainResults.trainServices[i].delayReason %></td>
+                                                                <% } else { %>
+                                                                    <td></td>
+                                                            <% } %>    
+                                                        <% } %>
+                                                            </tr>    
+                                                    <% } %>
+                                                <% } else { %>
+                                                        <tr><td></td><td></td><td></td><td></td></tr>
+                                                        <tr><td></td><td></td><td></td><td></td></tr>
+                                                        <tr><td></td><td></td><td></td><td></td></tr>
+                                                        <tr><td></td><td></td><td></td><td></td></tr>
+                                                        <tr><td></td><td></td><td></td><td></td></tr>
+                                                        <tr><td></td><td></td><td></td><td></td></tr>
+                        <% } %>
                                             
                     </table>
             </div>
             <div class="col-md-3">
                     <table class="delayBoard">
                         <tr><th>Delays</th></tr>
-                        <tr><% if(!trainResults.nrccMessages==null) { %>
+                        <tr><% if(trainResults.nrccMessages) { %>
                             <td><%- trainResults.nrccMessages[0].value %></td>
                         <% } else { %>
                             <td> No current delays </td>

@@ -2,6 +2,8 @@ body  {
     font-family: 'Raleway', sans-serif  !important;
 }
 
+/*Navigation header styling*/
+
 .navbar {
     height: 50px;
     color: #ffffff;
@@ -20,6 +22,8 @@ a.navbar-brand em {
     padding: 0;
 }
 
+/*Search page styling*/
+
 .trainHeadings, .trainSearch {
     display: flex;
     width: 60%;
@@ -35,6 +39,15 @@ a.navbar-brand em {
 .trainSearch input placeholder {
     text-align: center;
 }
+
+.form-control::-webkit-input-placeholder {color: #555; text-align: center;}
+.form-control::-webkit-input-placeholder {color: #555; text-align: center;}  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder {color: #555; text-align: center;}  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder {color: #555; text-align: center;}  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder {color: #555; text-align: center;}  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder {color: #555; text-align: center;}  /* Microsoft Edge */
+
+/*Results page styling*/
 
 .NRE, .circle {
     display: flex;
@@ -60,6 +73,7 @@ a.navbar-brand em {
     padding: 0;
 }
 
+/* Results page - departure and delay boards styling*/
 
 .departureBoard {
     display: flex;
@@ -73,7 +87,6 @@ a.navbar-brand em {
     box-shadow: 7px 7px 7px #c3c3c3;
     padding: 0;
     margin: 0;
-
 }
 
 .departureBoard tbody {
@@ -88,7 +101,7 @@ a.navbar-brand em {
     padding-right: 15px;
 }
 
-table.departureBoard tr:nth-of-type(even) {
+.departureBoard tr:nth-of-type(even) {
     background-color: #fff;
 }
 
@@ -106,6 +119,7 @@ table.departureBoard tr:nth-of-type(even) {
 .delayBoard {
 
     display: flex;
+    width: 400px;
     background-color: #cfcfcf;
     color: #000000;
     flex-direction: row;
@@ -117,8 +131,6 @@ table.departureBoard tr:nth-of-type(even) {
     margin: 0;
     height: 100px;
     transform: translateY(50px);
-
-    
 }
 
 .delayBoard tbody {
@@ -129,8 +141,7 @@ table.departureBoard tr:nth-of-type(even) {
 
     font-family: Helvetica, sans-serif;
 	text-align: center;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 400px;
 }
 
 .delayBoard tr:first-child {
@@ -138,14 +149,8 @@ table.departureBoard tr:nth-of-type(even) {
     height: 30px;
     width: 400px;
     color: #ffffff;
+    padding: 5px;
 }
 
 
 
-
-.form-control::-webkit-input-placeholder {color: #555; text-align: center;}
-.form-control::-webkit-input-placeholder {color: #555; text-align: center;}  /* WebKit, Blink, Edge */
-.form-control:-moz-placeholder {color: #555; text-align: center;}  /* Mozilla Firefox 4 to 18 */
-.form-control::-moz-placeholder {color: #555; text-align: center;}  /* Mozilla Firefox 19+ */
-.form-control:-ms-input-placeholder {color: #555; text-align: center;}  /* Internet Explorer 10-11 */
-.form-control::-ms-input-placeholder {color: #555; text-align: center;}  /* Microsoft Edge */
