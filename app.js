@@ -1,5 +1,6 @@
 var express                 = require("express"),
     app                     = express(),
+    session                 = require("express-session"),
     bodyParser              = require("body-parser"),
     router                  = express.Router(),
     axios                   = require("axios"),
@@ -17,6 +18,7 @@ app.use(require("express-session")({
     secret: "OiOiSavaloyGiesASwatch",
     resave: false,
     saveUninitialized: false }));
+app.use(session());
 app.use(flash());
 app.use(function(req,res, next){
     res.locals.currentUser = req.user;
@@ -48,7 +50,13 @@ app.post("/trains", function(req,res){
     axios.get(url)
     .then(function(response) {
         var trainResults = response.data;
-        res.render("trainResults", {trainResults: trainResults});
+        if(trainResults.trainServices) {
+            req.flash("success","We have found matching results for your journey.");
+            res.render("trainResults", { success: req.flash("success"), trainResults: trainResults});
+        } else {
+            req.flash("error", "I'm sorry, there are currently no direct services between these two stations..");
+            res.redirect("back");
+        }
     })
     .catch(function(error) {
         req.flash("error", "Search criteria returned zero results");

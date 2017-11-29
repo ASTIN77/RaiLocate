@@ -21,3 +21,15 @@
                     <a class="navbar-brand" href="#"><i class="fa fa-train fa-2x"></i><em> RaiLocate</em></a>
         </nav>
     </div>
+    
+<div class="container boardMessages">
+        <% if(error && error.length > 0) { %>
+            <div class="alert alert-danger" role="alert"><%= error %></div>
+        <% } %>
+        <% if(success && success.length > 0) { %>
+            <div class="alert alert-success" role="alert"><%= success %></div>
+        <% } %>
+        <% if(confirm && confirm.length > 0) { %>
+            <div class="alert alert-warning" role="alert"><%= confirm %></div>
+        <% } %>
+</div>
