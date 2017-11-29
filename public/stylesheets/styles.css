@@ -49,12 +49,25 @@ a.navbar-brand em {
 
 /*Results page styling*/
 
-.NRE, .circle {
+.contentBorder {
+    margin: 50px;
+    height: 75%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding-top: 30px;
+    border: 1px solid #c3c3c3;
+    box-shadow: 7px 7px 7px #c3c3c3;
+    overflow: hidden;
+    
+}
+
+.NRE {
     display: flex;
     margin: 20px auto;
     flex-direction: row;
     justify-content: space-around;
     text-align: center;
+    border-radius: 20px;
 }
 
 .buffer {
@@ -67,7 +80,7 @@ a.navbar-brand em {
     flex-direction: column;
     background-color: #003355;
     color: #ffffff;
-    /*border-radius: 50%;*/
+    border-radius: 20px;
     font-weight: bold;
     justify-content: center;
     align-items: center;
@@ -131,7 +144,7 @@ a.navbar-brand em {
     padding: 0;
     margin: 0;
     height: 100px;
-    transform: translateY(50px);
+    /*transform: translateY(50px);*/
 }
 
 .delayBoard tbody {
