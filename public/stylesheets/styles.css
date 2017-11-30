@@ -191,6 +191,10 @@ a.navbar-brand em {
         text-align: center;
     }
     
+    .img-responsive {
+        width: 80%;
+    }
+    
 
 
 
