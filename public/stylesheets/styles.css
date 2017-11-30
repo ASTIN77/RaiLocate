@@ -51,10 +51,10 @@ a.navbar-brand em {
 
 .contentBorder {
     margin: 50px;
-    height: 75%;
+    height: 100%;
     background-color: #fff;
     border-radius: 20px;
-    padding-top: 30px;
+    padding: 40px auto;
     border: 1px solid #c3c3c3;
     box-shadow: 7px 7px 7px #c3c3c3;
     overflow: hidden;
@@ -175,11 +175,7 @@ a.navbar-brand em {
 
 
 /*Galaxy S7 and S8 */
-@media only screen and (min-device-width : 360px) and (max-device-width : 640px){
-    
-    body {
-        font-size: 48px;
-    }
+@media screen and (max-width : 640px){
     
     .trainHeadings h1, .trainSearch {
         display: flex;
@@ -192,10 +188,24 @@ a.navbar-brand em {
     }
     
     .img-responsive {
-        width: 80%;
+        width: auto;
     }
     
-
+    .delayBoard {
+        margin: 30px auto;
+        width: 100%;
+    }
+    .delayBoard th tr td {
+        width: 100%;
+    }
+    
+    .delayBoard tbody {
+        width: 100%;
+    }
+    
+    .delayBoard tr:first-child {
+        width: 100%;
+    }
 
 
 }
