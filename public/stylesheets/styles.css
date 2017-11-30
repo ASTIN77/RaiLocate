@@ -174,4 +174,19 @@ a.navbar-brand em {
 }
 
 
+@media only screen and (max-width: 640px){
+    html, body {
+        font-size: 48px;
+    }
+    
+    .trainHeadings, .trainSearch {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        font-size: 48px;
+        justify-content: center;
+    }
+    
+
+}
 
