@@ -174,7 +174,8 @@ a.navbar-brand em {
 }
 
 
-@media screen and (max-width: 640px){
+/*Galaxy S7 and S8 */
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px){
     
     body {
         font-size: 48px;
