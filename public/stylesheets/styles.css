@@ -187,8 +187,14 @@ a.navbar-brand em {
         text-align: center;
     }
     
-    .img-responsive {
+    h3 {
+        text-align: center;
+        margin: 0;
+    }
+    
+   .NRE{
         width: auto;
+        margin: 10px;
     }
     
     .delayBoard {
