@@ -14,7 +14,7 @@
             
             <div class="col-md-6">
                 <table class="departureBoard">
-                        <tr><th>Departure</th><th>Expected</th><th>Platform</th><th>Updates</th></tr>
+                        <tr><th>Departure</th><th>Expected</th><th>Platform</th><th class="visible-md">Updates</th></tr>
                         <% if(trainResults.trainServices){ %>
                                 <% var noServices = trainResults.trainServices.length; %>
                                     <% for(i = 0; i<noServices; i++) { %>
@@ -26,23 +26,23 @@
                                                         <td>TBC</td>
                                                     <% } %>
                                                     <% if(trainResults.trainServices[i].isCancelled){ %>
-                                                         <td><%= trainResults.trainServices[i].cancelReason %></td>
+                                                         <td class="visible-md"><%= trainResults.trainServices[i].cancelReason %></td>
                                                     <% } else { %>
                                                             <% if(trainResults.trainServices[i].delayReason){ %>
-                                                                <td><%= trainResults.trainServices[i].delayReason %></td>
+                                                                <td class="visible-md"><%= trainResults.trainServices[i].delayReason %></td>
                                                                 <% } else { %>
-                                                                    <td></td>
+                                                                    <td class="visible-md"></td>
                                                             <% } %>    
                                                         <% } %>
                                                             </tr>    
                                                     <% } %>
                                                 <% } else { %>
-                                                        <tr><td></td><td></td><td></td><td></td></tr>
-                                                        <tr><td></td><td></td><td></td><td></td></tr>
-                                                        <tr><td></td><td></td><td></td><td></td></tr>
-                                                        <tr><td></td><td></td><td></td><td></td></tr>
-                                                        <tr><td></td><td></td><td></td><td></td></tr>
-                                                        <tr><td></td><td></td><td></td><td></td></tr>
+                                                        <tr><td></td><td></td><td></td><td class="visible-md"></td></tr>
+                                                        <tr><td></td><td></td><td></td><td class="visible-md"></td></tr>
+                                                        <tr><td></td><td></td><td></td><td class="visible-md"></td></tr>
+                                                        <tr><td></td><td></td><td></td><td class="visible-md"></td></tr>
+                                                        <tr><td></td><td></td><td></td><td class="visible-md"></td></tr>
+                                                        <tr><td></td><td></td><td></td><td class="visible-md"></td></tr>
                         <% } %>
                 </table>
             </div>

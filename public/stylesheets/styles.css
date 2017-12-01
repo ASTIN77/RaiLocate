@@ -175,7 +175,7 @@ a.navbar-brand em {
 
 
 /*Galaxy S7 and S8 */
-@media screen and (max-width : 640px){
+@media only screen and (max-width : 640px){
     
     .trainHeadings h1, .trainSearch {
         display: flex;
@@ -206,7 +206,7 @@ a.navbar-brand em {
     .delayBoard tr:first-child {
         width: 100%;
     }
-
+    
 
 }
 
