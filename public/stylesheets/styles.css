@@ -175,7 +175,7 @@ a.navbar-brand em {
 
 
 /*Galaxy S7 and S8 */
-@media screen and (max-width: 360px)  {
+@media screen and (max-width: 360px) {
     
     .trainHeadings h1, .trainSearch {
         display: flex;
@@ -192,8 +192,8 @@ a.navbar-brand em {
         margin: 0;
     }
     
-   .NRE {
-        width: auto;
+   .NRE img {
+        max-width: 100%;
         padding: 10px 20px;
     }
     
