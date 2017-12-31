@@ -12,10 +12,14 @@ nav {
 
 nav em {
     color: red;
+    margin: 5px 5px 5px 5px;
 }
 
 .navbar {
     color: #ffffff;
+}
+.middle-heading {
+    margin: 5px 5px 5px 5px;
 }
 
 a .big-train {
@@ -24,7 +28,12 @@ a .big-train {
     padding: 0;
 }
 
+.navbar-header, .navbar-right {
+    display: inline-block;
+}
+
 .navbar-header i, .navbar-right i {
+    display: inline-block;
     margin: 5px 5px 5px 5px;
     color: #034f8b;
 }
@@ -32,6 +41,7 @@ a .big-train {
 .navbar-header img, .navbar-right img {
     margin: 5px 5px 5px 5px;
 }
+
 
 
 /*Search page styling*/
