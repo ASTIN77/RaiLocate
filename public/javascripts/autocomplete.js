@@ -1,3 +1,7 @@
+let stateCheck = setInterval(() => {
+  if (document.readyState === 'complete') {
+    clearInterval(stateCheck);
+
 var departureDataList = document.getElementById('json-datalist');
 var destinationDataList = document.getElementById('json-datalist2');
 var departureInput = document.getElementById('ajax');
@@ -46,3 +50,6 @@ destinationInput.placeholder = "Loading options...";
 // Set up and make the request.
 request.open('GET', 'javascripts/railRef.json', true);
 request.send();
+
+  }
+}, 100);

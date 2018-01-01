@@ -7,7 +7,6 @@ var express                 = require("express"),
     Promise                 = require("promise"),
     methodOverride          = require("method-override"),
     XMLHttpRequest          = require("xmlhttprequest").XMLHttpRequest,
-    csv                     = require("fast-csv"),
     flash                   = require("connect-flash");
 
     
