@@ -7,6 +7,7 @@ var express                 = require("express"),
     Promise                 = require("promise"),
     methodOverride          = require("method-override"),
     XMLHttpRequest          = require("xmlhttprequest").XMLHttpRequest,
+    csv                     = require("fast-csv"),
     flash                   = require("connect-flash");
 
     
@@ -42,6 +43,7 @@ app.get("/trains", function(req,res){
 app.post("/trains", function(req,res){
     var departing = req.body.departing;
     var destination = req.body.destination;
+    
     var url = "http://huxleyapp.azurewebsites.net/departures/" + departing + "/to/" + destination +"/?accessToken=420b5ac9-3385-4b10-8419-5cfb557cfe2e&expand=true";
     console.log(url);
 

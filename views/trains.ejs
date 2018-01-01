@@ -1,6 +1,4 @@
 <% include ./partials/header %>
-
-<script src="https://use.fontawesome.com/9b4ef5087f.js"></script>
 <section>
     <div class="trainHeadings">
        <h1 class="visible-lg">RaiLocate - Fast, Reliable Train Information!</h1>
@@ -12,8 +10,10 @@
     <div class="container">
         <div class="form-group trainSearch">
             <form action="/trains" method="POST">
-                <input class="findStation form-control" type = "text" placeholder="Departing Station" name="departing"</input>
-                <input class="findStation form-control" type = "text" placeholder="Destination Station" name="destination"</input>
+                <input type="text" id="ajax" list="json-datalist" class="findStation form-control" name="departing"></input>
+                <datalist id="json-datalist"></datalist>
+                <input type="text" id="ajax2" list="json-datalist2" class="findStation form-control" name="destination"></input>
+                <datalist id="json-datalist2"></datalist>
                 <input class="form-control" type="submit" value="Find Trains!"></input>
             </form>
         </div>
@@ -28,5 +28,5 @@
     </div>
     </div>
 </div>
-
+<script src="javascripts/autocomplete.js"></script>
 <% include ./partials/footer %>
