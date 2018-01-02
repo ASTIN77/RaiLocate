@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Live UK data train location application",
   "main": "app.js",
-  "engines" : { "node" : ">=9.3.0" },
+  "engines" : { "node" : ">=8.9.3" },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
