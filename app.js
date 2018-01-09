@@ -1,6 +1,8 @@
 var express                 = require("express"),
     app                     = express(),
     session                 = require("express-session"),
+    cookieParser            = require('cookie-parser'),
+    memoryStore             =require('session-memory-store')(session),
     bodyParser              = require("body-parser"),
     router                  = express.Router(),
     axios                   = require("axios"),
@@ -11,13 +13,15 @@ var express                 = require("express"),
 
     
 app.set("view engine", "ejs");
+app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(require("express-session")({
     secret: "OiOiSavaloyGiesASwatch",
     resave: false,
-    saveUninitialized: false }));
+    saveUninitialized: false,
+    store: new memoryStore() }));
 app.use(session());
 app.use(flash());
 app.use(function(req,res, next){
