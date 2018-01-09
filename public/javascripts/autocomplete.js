@@ -11,7 +11,7 @@ var destinationInput = document.getElementById('ajax2');
 var request = new XMLHttpRequest();
 
 // Handle state changes for the request.
-request.onreadystatechange = function(response) {
+request.onreadystatechange = function(response, error) {
   if (request.readyState === 4) {
     if (request.status === 200) {
       // Parse the JSON
@@ -39,6 +39,7 @@ request.onreadystatechange = function(response) {
       // An error occured :(
       departureInput.placeholder = "Couldn't load datalist options :(";
       destinationInput.placeholder = "Couldn't load datalist options :(";
+      console.log(response.error);
     }
   }
 };
