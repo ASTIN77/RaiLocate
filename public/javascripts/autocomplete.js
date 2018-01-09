@@ -48,7 +48,7 @@ departureInput.placeholder = "Loading options...";
 destinationInput.placeholder = "Loading options...";
 
 // Set up and make the request.
-request.open('GET', 'public/javascripts/railRef.json', true);
+request.open('GET', '/public/javascripts/railRef.json', true);
 request.send();
 
   }
