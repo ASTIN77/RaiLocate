@@ -1,15 +1,15 @@
-var express                 = require("express"),
+var express                 = require('express'),
     app                     = express(),
-    session                 = require("express-session"),
+    session                 = require('express-session'),
     cookieParser            = require('cookie-parser'),
-    memoryStore             =require('session-memory-store')(session),
-    bodyParser              = require("body-parser"),
+    memoryStore             = require('session-memory-store')(session),
+    bodyParser              = require('body-parser'),
     router                  = express.Router(),
-    axios                   = require("axios"),
-    Promise                 = require("promise"),
-    methodOverride          = require("method-override"),
-    XMLHttpRequest          = require("xmlhttprequest").XMLHttpRequest,
-    flash                   = require("connect-flash");
+    axios                   = require('axios'),
+    Promise                 = require('promise'),
+    methodOverride          = require('method-override'),
+    XMLHttpRequest          = require('xmlhttprequest').XMLHttpRequest,
+    flash                   = require('connect-flash');
 
     
 app.set("view engine", "ejs");
@@ -22,7 +22,7 @@ app.use(require("express-session")({
     resave: false,
     saveUninitialized: false,
     store: new memoryStore() }));
-app.use(session());
+    
 app.use(flash());
 app.use(function(req,res, next){
     res.locals.currentUser = req.user;
