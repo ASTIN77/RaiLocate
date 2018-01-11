@@ -84,3 +84,11 @@ body {
 	opacity: 1;
 }
 
+@media only screen 
+      and (device-width: 360px)
+      and (orientation: portrait) {
+        
+#landing-header {
+  width: 70%;
+}
+}
