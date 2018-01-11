@@ -90,6 +90,13 @@ body {
         
   #landing-header {
     width: auto;
-  }      
+  }    
+  h1 {
+    width: 100%;
+  }  
+  
+  #landing-header btn-lg {
+    width: auto;
+  }
         
       }
