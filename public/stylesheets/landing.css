@@ -84,19 +84,3 @@ body {
 	opacity: 1;
 }
 
-@media only screen 
-      and (device-width: 360px)
-      and (orientation: portrait) {
-        
-  #landing-header {
-    width: auto;
-  }    
-  h1 {
-    width: 100%;
-  }  
-  
-  #landing-header btn-lg {
-    width: auto;
-  }
-        
-      }
