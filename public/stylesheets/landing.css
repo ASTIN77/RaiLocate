@@ -83,3 +83,13 @@ body {
 .no-cssanimations .slideshow li {
 	opacity: 1;
 }
+
+@media only screen 
+      and (device-width: 360px)
+      and (orientation: portrait) {
+        
+  #landing-header {
+    width: auto;
+  }      
+        
+      }
