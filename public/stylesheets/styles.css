@@ -99,84 +99,104 @@ a .big-train {
 
 /* Results page - departure and delay boards styling*/
 
-.departureBoard {
-    display: flex;
+.departureBoard{
+    display: table;
+    width: 100%; 
     background-color: #cfcfcf;
     border: 1px solid #c3c3c3;
     color: #000000;
-    flex-direction: row;
-    width: 100%;  
-    margin-bottom: 20px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 7px 7px 7px #c3c3c3;
     padding: 0;
     margin: 0;
+    margin-bottom: 20px;
 }
 
-.departureBoard tbody {
-    width: 100%;
-}
+.departureBoardHeader {
+    display: table-header-group;
 
-.departureBoard th, tr, td {
+}
+.departureHeader-cell {
+    display: table-cell;
     font-family: Helvetica, sans-serif;
-	text-align: center;
-	height: 50px;
-    padding-left: 15px;
-    padding-right: 15px;
+    font-size: 1.25em;
+    font-weight: bold;
+    background-color: #003355;
+    color: #ffffff;
+    vertical-align: middle;
+    text-align: center;
+    height: 50px;
+    border-bottom: 1px solid black;
+    width: 20%;
 }
 
-.departureBoard tr:nth-of-type(even) {
+#departureBoardBody {
+    display: table-row-group;
+}
+
+
+.departureBoard-row {
+    display: table-row;
+    height: 50px;
+}
+
+.departureBoard-cell {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width; 20%;
+}
+
+
+.departureBoard-row:nth-of-type(even) {
     background-color: #fff;
 }
 
-.departureBoard tr:first-child {
-    background-color: #003355;
-    height: 30px;
-    color: #ffffff;
-}
-
-.departureBoard th:nth-child(4), .departureBoard  tr td:nth-child(4) {
-    width: 100%;
-    text-align: left;
-}
 
 .delayBoard {
-
-    display: flex;
-    width: 400px;
+    display: table;
+    width: 100%;
     background-color: #cfcfcf;
     color: #000000;
-    flex-direction: row;
     margin-bottom: 20px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 7px 7px 7px #c3c3c3;
     padding: 0;
     margin: 0;
-    height: 100px;
+
 }
 
-.delayBoard tbody {
-    width: 100%;
+.delayBoardHeader {
+    display: table-header-group;
 }
 
-.delayBoard th, tr, td {
-
+.delayHeader-cell {
+    display: table-cell;
     font-family: Helvetica, sans-serif;
-	text-align: center;
-    width: 400px;
-}
-
-.delayBoard tr:first-child {
+    font-size: 1.25em;
+    font-weight: bold;
     background-color: #fd9328;
-    height: 30px;
-    width: 400px;
     color: #ffffff;
+    vertical-align: middle;
+    text-align: center;
+    height: 50px;
 }
 
-.delayBoard td:first-child{
-        padding: 5px 15px;
+#delayBoardBody {
+    display: table-row-group;
+}
+
+.delayBoard-row {
+   display: table-row;
+    height: 50px;
+}
+
+.delayBoard-cell {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .boardMessages {
@@ -205,22 +225,6 @@ a .big-train {
    .NRE img {
         max-width: 100%;
         padding: 10px 5px;
-    }
-    
-    .delayBoard {
-        margin: 30px auto;
-        width: 100%;
-    }
-    .delayBoard th tr td {
-        width: 100%;
-    }
-    
-    .delayBoard tbody {
-        width: 100%;
-    }
-    
-    .delayBoard tr:first-child {
-        width: 100%;
     }
     
 

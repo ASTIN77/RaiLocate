@@ -3,60 +3,75 @@
 <section>
     <div class="container-fluid">
         <div class="row">
-                <div class="col-md-3 visible-md visible-lg">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8 detailsBoard">
+                <div class="col-md-3 hidden-xs hidden-sm">
+                    <div class="detailsBoard">
                         <p>Depart : <%= trainResults.locationName %> </p>
                         <p>Arrive : <%= trainResults.filterLocationName %>  </p>
                     </div>
-                    <div class="col-md-2"></div>
                 </div>
             
             <div class="col-md-6">
-                <table class="departureBoard">
-                        <tr><th>Departure</th><th>Expected</th><th>Platform</th><th class="visible-md">Updates</th></tr>
-                        <% if(trainResults.trainServices){ %>
+                <div class="departureBoard">
+                    <div class="departureBoardHeader"></div>
+                        <div class="departureHeader-cell">Departure</div>
+                        <div class="departureHeader-cell">Expected</div>
+                        <div class="departureHeader-cell">Platform</div>
+                        <div class="departureHeader-cell hidden-xs hidden-sm">Updates</div>
+                    
+                        
+                        <div id="departureBoardBody">
+                            <% if(trainResults.trainServices){ %>
                                 <% var noServices = trainResults.trainServices.length; %>
                                     <% for(i = 0; i<noServices; i++) { %>
-                                            <tr><td><%= trainResults.trainServices[i].std %> </td>
-                                                <td><%= trainResults.trainServices[i].etd %> </td>
+                                        <div class="departureBoard-row"><div class="departureBoard-cell"><%= trainResults.trainServices[i].std %> </div>
+                                            <div class="departureBoard-cell"><%= trainResults.trainServices[i].etd %> </div>
                                                 <% if(trainResults.trainServices[i].platform){ %>
-                                                    <td><%= trainResults.trainServices[i].platform %> </td>
+                                                    <div class="departureBoard-cell"><%= trainResults.trainServices[i].platform %> </div>
                                                 <% } else { %>
-                                                        <td>TBC</td>
+                                                        <div class="departureBoard-cell">TBC</div>
                                                     <% } %>
                                                     <% if(trainResults.trainServices[i].isCancelled){ %>
-                                                         <td class="visible-md"><%= trainResults.trainServices[i].cancelReason %></td>
+                                                         <div class="departureBoard-cell hidden-xs hidden-sm"><%= trainResults.trainServices[i].cancelReason %></div>
                                                     <% } else { %>
-                                                            <% if(trainResults.trainServices[i].delayReason){ %>
-                                                                <td class="visible-md"><%= trainResults.trainServices[i].delayReason %></td>
+                                                        <% if(trainResults.trainServices[i].delayReason){ %>
+                                                            <div class="departureBoard-cell hidden-xs hidden-sm"><%= trainResults.trainServices[i].delayReason %></div>
                                                                 <% } else { %>
-                                                                    <td class="visible-md"></td>
+                                                                    <div class="departureBoard-cell hidden-xs hidden-sm"></div>
                                                             <% } %>    
                                                         <% } %>
-                                                            </tr>    
+                                                            </div>    
                                                     <% } %>
                                                 <% } else { %>
-                                                        <tr><td></td><td></td><td></td><td class="visible-md"></td></tr>
-                                                        <tr><td></td><td></td><td></td><td class="visible-md"></td></tr>
-                                                        <tr><td></td><td></td><td></td><td class="visible-md"></td></tr>
-                                                        <tr><td></td><td></td><td></td><td class="visible-md"></td></tr>
-                                                        <tr><td></td><td></td><td></td><td class="visible-md"></td></tr>
-                                                        <tr><td></td><td></td><td></td><td class="visible-md"></td></tr>
+                                                        <div class="departureBoard-row"><div class="departureBoard-cell"></div><div class="departureBoard-cell"></div><div class="departureBoard-cell"></div><div class="departureBoard-cell hidden-xs hidden-sm"></div></div>
+                                                        <div class="departureBoard-row"><div class="departureBoard-cell"></div><div class="departureBoard-cell"></div><div class="departureBoard-cell"></div><div class="departureBoard-cell hidden-xs hidden-sm"></div></div>
+                                                        <div class="departureBoard-row"><div class="departureBoard-cell"></div><div class="departureBoard-cell"></div><div class="departureBoard-cell"></div><div class="departureBoard-cell hidden-xs hidden-sm"></div></div>
+                                                        <div class="departureBoard-row"><div class="departureBoard-cell"></div><div class="departureBoard-cell"></div><div class="departureBoard-cell"></div><div class="departureBoard-cell hidden-xs hidden-sm"></div></div>
+                                                        <div class="departureBoard-row"><div class="departureBoard-cell"></div><div class="departureBoard-cell"></div><div class="departureBoard-cell"></div><div class="departureBoard-cell hidden-xs hidden-sm"></div></div>
+                                                        <div class="departureBoard-row"><div class="departureBoard-cell"></div><div class="departureBoard-cell"></div><div class="departureBoard-cell"></div><div class="departureBoard-cell hidden-xs hidden-sm"></div></div>
+
                         <% } %>
-                </table>
-            </div>
+                        </div>
+                    </div>
+                </div>
+
             <div class="col-md-3">
-                    <table class="delayBoard">
-                        <tr><th>Delays</th></tr>
-                        <tr><% if(trainResults.nrccMessages) { %>
-                            <td><%- trainResults.nrccMessages[0].value %></td>
-                        <% } else { %>
-                            <td> No current delays via this route.</td>
-                            <% } %>
-                            </tr>
-                    </table>
-            </div>
+                    <div class="delayBoard">
+                        <div class="delayBoardHeader"></div>
+                        <div class="delayHeader-cell">Delays</div>
+                            <div id="delayBoardBody">
+                                    <% if(trainResults.nrccMessages) { %>
+                                    <div class="delayBoard-row">
+                                        <div class="delayBoard-cell"><%- trainResults.nrccMessages[0].value %></div>
+                                    </div>
+                                <% } else { %>
+                                    <div class="delayBoard-row">
+                                        <div class="delayBoard-cell"> No current delays via this route.</div>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     </div>
 </section>
 
