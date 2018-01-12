@@ -207,6 +207,15 @@ a .big-train {
     text-align: center;
 }
 
+.rounded {
+    border-radius: 20px;
+    margin: 30px 0;
+    font-weight: bold;
+    background-color: #003355;
+    border: 1px solid #003355;
+    box-shadow: 7px 7px 7px #c3c3c3;
+}
+
 
 /*Galaxy S7 and S8 */
 @media screen and (max-width: 360px) {

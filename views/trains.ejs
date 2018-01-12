@@ -10,9 +10,9 @@
     <div class="container">
         <div class="form-group trainSearch">
             <form action="/trains" method="POST">
-                <input type="text" id="ajax" list="json-datalist" class="findStation form-control" name="departing"></input>
+                <input type="text" id="ajax" list="json-datalist" class="findStation form-control" name="departing" autocomplete="off"></input>
                 <datalist id="json-datalist"></datalist>
-                <input type="text" id="ajax2" list="json-datalist2" class="findStation form-control" name="destination"></input>
+                <input type="text" id="ajax2" list="json-datalist2" class="findStation form-control" name="destination" autocomplete="off"></input>
                 <datalist id="json-datalist2"></datalist>
                 <input class="form-control" type="submit" value="Find Trains!"></input>
             </form>
