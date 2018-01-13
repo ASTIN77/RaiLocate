@@ -1,12 +1,10 @@
 <% include ./partials/header %>
 <section>
     <div class="trainHeadings">
-       <h1 class="visible-lg">RaiLocate - Fast, Reliable Train Information!</h1>
-       <h3 class="visible-xs visible-sm">Enter Your Journey Details Below:</h3>
+       <h1 class="hidden-xs hidden-sm">RaiLocate - Fast, Reliable Train Information!</h1>
+       <h3 class="hidden-md hidden-lg">Enter Your Journey Details Below:</h3>
       </div>
-</section>
 
-<section>
     <div class="container">
         <div class="form-group trainSearch">
             <form action="/trains" method="POST">
@@ -14,7 +12,7 @@
                 <datalist id="json-datalist"></datalist>
                 <input type="text" id="ajax2" list="json-datalist2" class="findStation form-control" name="destination" autocomplete="off"></input>
                 <datalist id="json-datalist2"></datalist>
-                <input class="form-control" type="submit" value="Find Trains!"></input>
+                <input id="findButton" class="form-control" type="submit" value="Find Trains!"></input>
             </form>
         </div>
     </div>
@@ -23,8 +21,8 @@
 <div class="container">
     <div class="row">
         <div class="NRE">
-        <img class="img-reponsive" src="images/NRE_Powered_logo.png" alt="Powered By National Rail Enquiries"></img>
-    </div>
+            <img class="img-reponsive" src="images/NRE_Powered_logo.png" alt="Powered By National Rail Enquiries"></img>
+        </div>
     </div>
     </div>
 </div>

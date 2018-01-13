@@ -1,5 +1,6 @@
-body  {
+body, html  {
     font-family: 'Raleway', sans-serif !important;
+    height:100%;
 }
 
 /*Navigation header styling*/
@@ -9,15 +10,16 @@ nav {
     font-size: 32px;
     font-weight: bold;
 }
+.navbar-default {
+    background-color: #003355;
+}
 
 nav em {
-    color: red;
+    color: #fff;
     margin: 5px 5px 5px 5px;
 }
 
-.navbar {
-    color: #ffffff;
-}
+
 .middle-heading {
     margin: 5px 5px 5px 5px;
 }
@@ -35,7 +37,8 @@ a .big-train {
 .navbar-header i, .navbar-right i {
     display: inline-block;
     margin: 5px 5px 5px 5px;
-    color: #034f8b;
+    color: #fff;
+
 }
 
 .navbar-header img, .navbar-right img {
@@ -49,13 +52,27 @@ a .big-train {
 .trainHeadings, .trainSearch {
     display: flex;
     width: 60%;
+    text-align: center;
+    color: #003355;
     flex-direction: row;
     justify-content: space-around;
     margin: 20px auto;
+
+
+}
+
+.trainSearch {
+    background-color: #003355;
+    border-radius: 20px;
+
+}
+.trainSearch form {
+    padding: 50px;
 }
 
 .trainSearch input {
     margin: 10px auto;
+    width: 300px;
 }
 
 .trainSearch input placeholder {
@@ -69,6 +86,12 @@ a .big-train {
 .form-control:-ms-input-placeholder {color: #555; text-align: center;}  /* Internet Explorer 10-11 */
 .form-control::-ms-input-placeholder {color: #555; text-align: center;}  /* Microsoft Edge */
 
+#findButton {
+    background-color: #fd9328;
+    border: 2px solid #fd9328;
+    color: #fff;
+    font-weight: bold;
+}
 /*Results page styling*/
 
 .NRE {
@@ -218,7 +241,9 @@ a .big-train {
 
 
 /*Galaxy S7 and S8 */
-@media screen and (max-width: 360px) {
+@media only screen 
+    and (max-width: 768px)
+    and (orientation: portrait) {
     
     .trainHeadings h1, .trainSearch {
         display: flex;
@@ -240,6 +265,9 @@ a .big-train {
         padding: 10px 5px;
     }
     
+    .trainSearch input {
+        width: auto;
+}
 
 }
 
