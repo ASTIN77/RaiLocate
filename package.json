@@ -29,7 +29,7 @@
     "express": "^4.17.1",
     "express-session": "^1.16.2",
     "fast-csv": "^2.5.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-csv": "^0.8.12",
     "jsdom": "^11.12.0",
     "method-override": "^2.3.10",
