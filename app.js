@@ -52,7 +52,8 @@ app.post("/trains", function (req, res) {
   var destination = req.body.destination;
   /* test */
   var url =
-    "http://huxleyapp.azurewebsites.net/departures/" +
+    //"http://huxleyapp.azurewebsites.net/departures/" +
+    "https://huxleyapp.azurewebsites.net/departures/" +
     departing +
     "/to/" +
     destination +
@@ -61,7 +62,7 @@ app.post("/trains", function (req, res) {
 
   axios
     .get(url)
-    .then(function (response) {
+    .then((response) => {
       var trainResults = response.data;
       if (trainResults.trainServices) {
         req.flash(
@@ -73,6 +74,7 @@ app.post("/trains", function (req, res) {
           trainResults: trainResults,
         });
       } else {
+        console.log(trainResults.trainServices);
         req.flash(
           "error",
           "I'm sorry, there are currently no direct services between these two stations.."
@@ -80,7 +82,8 @@ app.post("/trains", function (req, res) {
         res.redirect("back");
       }
     })
-    .catch(function (error) {
+    .catch((error) => {
+      console.log(error.response);
       req.flash("error", "Search criteria returned zero results");
       res.redirect("back");
     });
