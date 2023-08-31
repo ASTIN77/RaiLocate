@@ -57,7 +57,7 @@ app.post("/trains", function (req, res) {
     departing +
     "/to/" +
     destination +
-    "/?accessToken=420b5ac9-3385-4b10-8419-5cfb557cfe2e";
+    "/?accessToken=f48868d3-6a1f-42d1-a40b-1389e7129139";
   console.log(url);
 
   axios
