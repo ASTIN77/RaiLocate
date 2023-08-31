@@ -53,7 +53,7 @@ app.post("/trains", function (req, res) {
   /* test */
   var url =
     //"http://huxleyapp.azurewebsites.net/departures/" +
-    "https://huxleyapp.azurewebsites.net/departures/" +
+    "https://huxley2.azurewebsites.net/departures/" +
     departing +
     "/to/" +
     destination +
