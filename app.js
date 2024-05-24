@@ -12,6 +12,7 @@ var express = require("express"),
   flash = require("connect-flash");
 
 app.set("view engine", "ejs");
+app.set("views", __dirname + "/views");
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
@@ -34,7 +35,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 3004);
 
 // INDEX ROUTE
 app.get("/", function (req, res) {
