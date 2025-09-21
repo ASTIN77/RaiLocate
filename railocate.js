@@ -84,7 +84,7 @@ app.post('/trains', async (req, res) => {
     const token =
       process.env.HUXLEY_TOKEN;
 
-    const url = `https://huxley2.azurewebsites.net/departures/${encodeURIComponent(
+    const url = `http://127.0.0.1:5055/departures/${encodeURIComponent(
       departing
     )}/to/${encodeURIComponent(destination)}/?accessToken=${encodeURIComponent(
       token
