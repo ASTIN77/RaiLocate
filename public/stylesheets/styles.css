@@ -19,7 +19,6 @@ nav em {
     margin: 5px 5px 5px 5px;
 }
 
-
 .middle-heading {
     margin: 5px 5px 5px 5px;
 }
@@ -57,14 +56,11 @@ a .big-train {
     flex-direction: row;
     justify-content: space-around;
     margin: 20px auto;
-
-
 }
 
 .trainSearch {
     background-color: #003355;
     border-radius: 20px;
-
 }
 .trainSearch form {
     padding: 50px;
@@ -240,6 +236,46 @@ a .big-train {
 }
 
 
+/* ===== Professional Autocomplete styling (jQuery UI) ===== */
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #e3e6ea;
+    border-radius: 10px;
+    padding: 4px 0;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.14);
+    font-size: 0.95rem;
+    z-index: 10000;
+}
+.ui-menu-item-wrapper {
+    padding: 8px 12px;
+    line-height: 1.25;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ui-state-active {
+    background: #f2f6fb !important;
+    border: 0 !important;
+    margin: 0 !important;
+}
+/* Inputs polish */
+.findStation.form-control {
+    border-radius: 12px;
+    border: 1px solid #cfd6de;
+    height: 44px;
+    text-align: center;
+    font-size: 1rem;
+}
+.findStation.form-control:focus {
+    border-color: #4f9ae6;
+    box-shadow: 0 0 0 3px rgba(79,154,230,0.2);
+    outline: none;
+}
+
+
 /*Galaxy S7 and S8 */
 @media only screen 
     and (max-width: 768px)
@@ -267,7 +303,64 @@ a .big-train {
     
     .trainSearch input {
         width: auto;
+    }
 }
 
+/* ===== Autocomplete UX refinements ===== */
+
+/* Dropdown box */
+.ui-autocomplete {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #e3e6ea;
+  border-radius: 10px;
+  padding: 4px 0;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.14);
+  font-size: 0.95rem;
+  z-index: 10000;
+  margin-top: 6px;               /* gap below input field */
 }
+
+/* Active/hover menu items */
+.ui-menu .ui-state-active,
+.ui-menu .ui-state-focus,
+.ui-state-active {
+  background: #f2f6fb !important; /* soft highlight */
+  color: #003355 !important;       /* brand blue */
+  border: 0 !important;
+}
+
+/* Menu items */
+.ui-menu-item-wrapper {
+  padding: 8px 12px;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Add vertical spacing between inputs to stop dropdown overlap */
+.trainSearch form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;  /* nice breathing room between fields */
+}
+
+.findStation.form-control {
+  border-radius: 12px;
+  border: 1px solid #cfd6de;
+  height: 56px;               /* taller box */
+  text-align: center;
+  font-size: 1.25rem;          /* bigger text inside */
+  font-weight: 500;            /* give placeholder/body text more weight */
+}
+.findStation.form-control::placeholder {
+  font-size: 1.25rem;          /* match input font size */
+  font-weight: 500;
+  color: #555;
+}
+
 
