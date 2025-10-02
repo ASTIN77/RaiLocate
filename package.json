@@ -7,7 +7,7 @@
     "node": ">=8.9.3"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "node railocate.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -44,6 +44,10 @@
     "passport-local-mongoose": "^4.5.0",
     "promise": "^8.0.3",
     "session-memory-store": "^1.0.0",
+    "soap": "^1.4.2",
+    "strong-soap": "^5.0.2",
+    "winston": "^3.18.3",
+    "xml2js": "^0.6.2",
     "xmlhttprequest": "^1.8.0"
   }
 }
